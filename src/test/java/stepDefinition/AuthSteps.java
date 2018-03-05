@@ -11,22 +11,22 @@ import pageobjects.LoginPage;
 
 import java.util.concurrent.TimeUnit;
 
-public class AuthClass {
+public class AuthSteps {
 
     public WebDriver driver;
     LoginPage loginPage;
     HomePage homePage;
 
-    public AuthClass()
+    public AuthSteps()
     {
         driver=Hooks.driver;
     }
 
     @Given("^User is on Home Page$")
     public void user_is_on_Home_Page() throws Throwable {
-        System.setProperty("webdriver.chrome.driver","F:\\Workspace\\SeleniumAutomation\\Resource\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+       // System.setProperty("webdriver.chrome.driver","F:\\Workspace\\SeleniumAutomation\\Resource\\chromedriver.exe");
+        //driver = new ChromeDriver();
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://www.store.demoqa.com");
     }
 
